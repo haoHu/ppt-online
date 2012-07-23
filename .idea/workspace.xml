@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c50accbd-d816-429b-8c68-e3f6e193d13d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/impress-demo.css" afterPath="$PROJECT_DIR$/css/impress-demo.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="ppt-online.iws" />
@@ -28,7 +27,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="355" column="0" selection-start="14567" selection-end="14567" vertical-scroll-proportion="0.37577003">
+            <state line="240" column="0" selection-start="10686" selection-end="10686" vertical-scroll-proportion="0.33675563">
               <folding />
             </state>
           </provider>
@@ -292,7 +291,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="355" column="0" selection-start="14567" selection-end="14567" vertical-scroll-proportion="0.37577003">
+        <state line="240" column="0" selection-start="10686" selection-end="10686" vertical-scroll-proportion="0.33675563">
           <folding />
         </state>
       </provider>
