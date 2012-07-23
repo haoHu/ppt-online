@@ -290,8 +290,8 @@ a:focus {
 #big {
     width: 600px;
     text-align: center;
-    font-size: 60px;
-    line-height: 1;
+    font-size: 40px;
+    line-height: 1.5;
 }
 
 #big b {
@@ -316,7 +316,7 @@ a:focus {
 /*
     This step has some animated text ...
 */
-#ing { width: 500px }
+#ing { width: 600px }
 
 /*
     ... so we define display to `inline-block` to enable transforms and
@@ -685,6 +685,7 @@ a:focus {
 .impress-enabled          { pointer-events: none }
 .impress-enabled #impress { pointer-events: auto }
 
+pre {font-size:20px;}
 /*
     There is one funny thing I just realized.
     
