@@ -102,16 +102,15 @@
         
     -->
     <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
-		<q>哗啦啦订餐时间</q>
+		<q>哗啦啦商家订餐促销前端需求分析</q>
+		<p>平台提供<b>5</b>个就餐时段（早餐，午餐，下午茶，晚餐，夜宵），商家可以通过admin，商户系统动态设置自己餐厅提供的时段，涉及到WWW站点的修改主要包括：</p>
 		<ul>
-			<li><a href="http://www.hualala.com" target="_blank"><b>WWW站点</b></a>---为使用浏览器点菜的用户提供的网站</li>
-			<li><b>爱疯客户端</b>---为时尚潮男潮女们打造的移动点菜工具</li>
-			<li><b>Android客户端</b>---为经济适用男/女们打造的移动点菜工具</li>
-			<li><a href="http://admin.hualala.com" target="_blank"><b>Admin后台管理系统</b></a>--为运维人员提供管理功能</li>
-			<li><a href="http://shop.hualala.com" target="_blank"><b>商家管理系统</b></a>--为商家开发管理功能，让他们有自己开的欲望</li>
-			<li>........</li>
+			<li>店铺首页的<b>时间选择</b></li>
+			<li>店铺首页的<b>促销信息展示</b></li>
+			<li><b>订单</b>信息展示（就餐时间，就餐人数，促销信息，结算金额）</li>
+			<li>搜索页面中的事件选择（用户可以在搜索某时段营业的店铺）</li>
 		</ul>
-		<p>未来我们不知道还会有些什么</p>
+		<p>可能还有订单确认页面的相关信息展示，未来可能涉及订单评价，订单分享中带入促销信息等宣传信息的需求</p>
     </div>
 
     <!--
@@ -130,249 +129,152 @@
         
     -->
     <div class="step slide" data-x="0" data-y="-1500">
-		<q>不想当懒人的程序猿不是好厨子！</q>
-        <p>这么多的功能这么多的页面，对于我们前端的<b>码农</b>来说，是一个巨大的挑战。</p>
-		<p>如果我们只是遇到一个需求，就做一个页面，做一套交互，做一遍样式，那我们干到共产主义实现也不一定能干完。</p>
-		<p>我们是页面仔，但是我们很自豪的说我们也是<strong>程序<del>猿</del>员</strong>!</p>
-		<p>程序员都有一个共同的优点---<strong>懒</strong>！懒到总是想方设法让自己做的每件事情都可以不用重做。</p>
-		<p>人生还有很多有意思的东西等着我们去发现，不能在重复的工作上浪费时间</p>
+		<q>店铺首页的<b>时间选择</b></q>
+		<img src="./images/hualala_dinner_time_1.png"/>
+		<img src="./images/hualala_dinner_time_2.png"/>
     </div>
 
     <div class="step slide" data-x="1000" data-y="-1500">
-        <q><strong>SeaJS</strong>,<strong>Alice</strong>...别人的智慧结晶能否让我们有所启发？</q>
-		<h3><strong>什么是SeaJS？</strong></h3>
-		<p><a href="http://seajs.org/" target="_blank">SeaJS</a>是一个遵循CommonJS规范的JavaScript模块加载框架
-			(作者<a href="https://github.com/lifesinger" target="_blank">玉伯</a>写的是加载器，但是本人认为其强大的就像一个框架)，使用SeaJS，可以更好的组织Javascript代码。
-			让我们的工作变得更有条理。
-		</p>
-		<h3><strong>什么是Alice？</strong></h3>
-		<p><a href="http://aliceui.com/">Alice</a>是支付宝前端样式解决方案小组的代号。她包括构建样式库的解决方案。
+		<h3>店铺首页的<b>日期选择</b></h3>
+		<span>
+			如果以日历形式展示，需要预留21格，订餐时间是从当天向后的14天，
+			当天有可能是一周中的任一一天。所以预留3周的格子显示比较妥当。
+			交互大概步骤如下：
+		</span>
+		<pre>
+			user click dateSelector;
+			show weekly calendar;
+			if (today is not Sunday) {
+				show 3 weeks date cells;
+				disabled other date cells except future 14 days;
+			} else {
+				show 2 weeks date cells;
+			}
+			if (user click the date of next month) {
+				change weekly calendar title to next month;
+			}
+			then callback order_SearchOrderTimeTableSurplus service;
+			update the data of time selector;
+			update the time info in order;
+		</pre>
 
-		</p>
 
     </div>
 
     <!--
-        
+
         This is an example of step element being scaled.
-        
+
         Again, we use a `data-` attribute, this time it's `data-scale="4"`, so it means that this
         element will be 4 times larger than the others.
         From presentation and transitions point of view it means, that it will have to be scaled
         down (4 times) to make it back to it's correct size.
-        
+
     -->
-    <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
-        <span class="try">下面我们先介绍</span>
-        <h1>Alice<sup>*</sup></h1>
-        <span class="footnote"><sup>*</sup> 这个向用户展示精美页面必不可少的样式解决方案</span>
+    <div class="step slide" data-x="2000" data-y="-1500">
+		<q>店铺首页的<b>时间选择</b></q>
+		<img src="./images/hualala_dinner_time_3.png"/>
+
     </div>
 
     <!--
-        
+
         This element introduces rotation.
-        
+
         Notation shouldn't be a surprise. We use `data-rotate="90"` attribute, meaning that this
         element should be rotated by 90 degrees clockwise.
-        
+
     -->
-    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
-        <p>她提供了<strong>页面展示的解决方案</strong> <br/>
-        如果我们的<strong>风格统一</strong>，那么代码就会<strong>有规可循</strong>，我们可以根据命名了解结构，<br/>
-		根据结构了解构建代码的原理。对于<strong>垮产品的合作</strong>，将是<strong>无缝</strong>的；对于<strong>多人的开发debug</strong>，也将是<strong>无障碍</strong>的。<br/>
-
-        </p>
-    </div>
-
-    <div id="big" class="step" data-x="3900" data-y="2400" data-rotate="180" data-scale="6">
-		<p>我们可以在<b>支付宝</b>的各条产品线上看到<strong>Alice</strong>的身影。</p>
-
-    </div>
-
-    <!--
-        
-        And now it gets really exiting! We move into third dimension!
-        
-        Along with `data-x` and `data-y`, you can define the position on third (Z) axis, with
-        `data-z`. In the example below we use `data-z="-3000"` meaning that element should be
-        positioned far away from us (by 3000px).
-        
-    -->
-    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
-		<p>她包括一套规范
-			（<a href="http://aliceui.com/css-spec/" target="_blank">css编码规范</a>+<a target="_blank" href="http://aliceui.com/alice-css-guide">样式库构建规范</a>），
-			一个<a target="_blank" href="http://aliceui.com/alice-css/#solutions">兼容解决方案库</a>和一个需要你根据规范和团队产品去构建的团队样式库
-		</p>
-    </div>
-
-    <!--
-        
-        This step here doesn't introduce anything new when it comes to data attributes, but you
-        should notice in the demo that some words of this text are being animated.
-        It's a very basic CSS transition that is applied to the elements when this step element is
-        reached.
-        
-        At the very beginning of the presentation all step elements are given the class of `future`.
-        It means that they haven't been visited yet.
-        
-        When the presentation moves to given step `future` is changed to `present` class name.
-        That's how animation on this step works - text moves when the step has `present` class.
-        
-        Finally when the step is left the `present` class is removed from the element and `past`
-        class is added.
-        
-        So basically every step element has one of three classes: `future`, `present` and `past`.
-        Only one current step has the `present` class.
-        
-    -->
-    <div id="ing" class="step" data-x="3500" data-y="-1500" data-rotate="270" data-scale="6">
-		<p>主要从以下两方面来构建Alice：<br/><b class="positioning">减少依赖</b>，<b class="scaling">避免耦合</b>;<br/><b class="rotating">统一风格</b>，让代码<b class="rotating">有规可循</b>，保证团队的协作效率</p>
-
-    </div>
-
-    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
-        <p>我们只需要按照<b>规范</b>，使用<b>Alice</b>实现产品的<b>展示</b></p>
-    </div>
-
-    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
-        <p>How To Use <b>Alice</b>?</p>
-        <q>请认真阅读<a href="http://aliceui.com/alice-css-guide/" target="_blank">样式库构建规范</a>!</q>
-    </div>
-
-	<div id="alice_pattern" class="step" data-x="-5000" data-y="-2000" data-rotate="180" data-scale="6">
-		<h3><b>Alice</b>的设计模式</h3>
+    <div class="step slide" data-x="3000" data-y="-1500" data-rotate="90">
+		<h3>店铺首页的<b>时间选择</b></h3>
 		<p>
-			<img src="./images/alice_pattern.png" width="784" height="411"/>
+			时间是分段的，最多显示5个时间段，并且每段时间的时间点间隔也是动态的，推荐采用纵向tab形式，根据餐厅设置营业时间分段展示，或者采用二级下拉框展示。交互逻辑如下
 		</p>
-	</div>
-
-	<div id="alice_structs" class="step" data-x="-6000" data-y="-5100" data-rotate="0" data-scale="6">
-		<h3><b>Alice</b>的文件结构</h3>
 		<pre>
-			---
-			 |---plugins/		浏览器兼容解决方案对应的编辑器插件
-			 |---solutions/	浏览器兼容解决方案对应的编辑器插件
-			 |---- tpl/		参考的模板文件
-			 |---- w3c/		HTML5/CSS3 标准文档
-			 |---- base.css 	Alice 的基础，所有样式均基于它,用于CSS reset，定义一些基本的小功能，例如浮动，清除浮动，隐藏，显示等样式
+			user click time selector;
+			show time selector;
+			disable all time cells before current time;
+			user select one period;
+			show the period time cells;
+			show the promotion rules in the current period
+			if (tables are full in current period) {
+				disable all of time cells in this period;
+				show the full incon in this periods;
+			}
+			then callback order_SearchOrderTimeTableSurplus service;
+			update the data of time selector
+			update the time info in order
 		</pre>
-	</div>
-
-    <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
-        <p>接下来我们讨论一下SeaJS...</p>
     </div>
 
-    <!--
-        
-        And the last one shows full power and flexibility of impress.js.
-        
-        You can not only position element in 3D, but also rotate it around any axis.
-        So this one here will get rotated by -40 degrees (40 degrees anticlockwise) around X axis and
-        10 degrees (clockwise) around Y axis.
-        
-        You can of course rotate it around Z axis with `data-rotate-z` - it has exactly the same effect
-        as `data-rotate` (these two are basically aliases).
-        
-    -->
-    <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
-        <p><span class="have">SeaJS</span> <span class="you">本身</span> <span class="noticed">遵循</span> <span class="its">KISS</span> <span class="in">理念</span> <b>进行开发<sup>*</sup></b></p>
-        <span class="footnote">仅做一件事，做好一件事</span>
+    <div class="step slide" data-x="3000" data-y="0" data-rotate="90">
+		<h3 style="text-align: left;">店铺首页的时间选择</h3>
+		<ul style="text-align: left; font-size: 20px;">
+			<li>如果用tab展示的话，优点是不用一次将所有餐段时间点列出，每次只显示一个时间段时间点，缺点是可能没个tab时间点数量不一致</li>
+			<li>如果采用二级下拉框，优点是节省展示空间，用户先选择餐段再选择时间点，缺点是，操作次数过多，由于每个时间点的状态较多，交互繁琐，而且不直观。</li>
+		</ul>
+
+
     </div>
 
-	<div id="seajs-benifit-1" class="step" data-x="6500" data-y="5500" data-rotate-x="-90" data-rotate-y="20" data-scale="4">
-		<h3>传统模式VSSeaJS模块化开发</h3>
-		<p><strong>Case1:集团首页中各种组件实现</strong></p>
+    <div class="step slide" data-x="3000" data-y="1500" data-rotate="90">
+		<h3 style="text-align: left;">店铺首页的就餐人数选择</h3>
+		<img src="./images/hualala_dinner_time_4.png"/>
+		<p>是否也能动态设置，比如有些餐厅桌台可能没有大桌（自己YY不再考虑范围）,交互逻辑如下：</p>
 		<pre>
-			一个店铺集团首页可能会有多个组件例如：店铺列表组件（shop-list），最近订单组件（order-list），
-			优惠消息组件（prom-list），广告组件（ad-list）等等。<br/>
-			每个组件都会有自己实现业务的js脚本。每个脚本又有可能依赖其他模块的代码。如果按照传统的方式开发，
-			势必，开发过程中手动引用脚本的地方会越来越多，越发难以管理。
-			例如shop-list组件shop-list.js依赖shop-list-a1.js,shop-list-a1.js有依赖于shop-list-a2.js
+			user click table selector;
+			show table selector list;
+			user select table;
+			callback order_SearchOrderTimeTableSurplus service;
+			update table info in order;
 		</pre>
-	</div>
+    </div>
 
-	<div id="seajs-benifit-2" class="step" data-x="7500" data-y="12500" data-rotate-x="60" data-rotate-y="2" data-scale="4">
-		<p>代码可能如下：</p>
+
+    <div class="step slide" data-x="3000" data-y="3000" data-rotate="90">
+		<h3>优惠信息的展示</h3>
+		<p>优惠信息必须按照一定语法展示，否则从后台获取的优惠信息很难展示统一。例如：</p>
+		<p>下午茶时段消费，满50元，减免5元，送小礼品</p>
+		<p>下午茶时段消费，满50元，打九折，送小礼品</p>
+		<p>下午茶时段消费，满50元，送小礼品</p>
 		<pre>
-			&lt;html&gt;
-				&lt;head&gt;
-					&lt;script src="./jquery-min.js"&gt;&lt;/script&gt;
-					&lt;script src="./shop-list-a1.js"&gt;&lt;/script&gt;
-					&lt;script src="./shop-list-a2.js"&gt;&lt;/script&gt;
-					&lt;script src="./shop-list.js"&gt;&lt;/script&gt;
-				&lt;/head&gt;
-				&lt;body&gt;
-				&lt;script&gt;
-				$(document).ready(function () {
-					//如果复杂的页面中各个组件依赖的其他模块很多的话，那维护与开发的效率就会降低。
-					......
-				});
-				&lt;/script&gt;
-				&lt;/body&gt;
-			&lt;/html&gt;
+			[timeName]+startTime + '~' + endTime + '满' +  	payVoucherRate + returnVoucher
 		</pre>
+    </div>
+
+    <div class="step slide" data-x="2000" data-y="3000" data-rotate="180">
+		<h3>日期，时间选择细节</h3>
+		<p>根据设计图确定</p>
+    </div>
+
+	<div class="step slide" data-x="1000" data-y="3000" data-rotate="180">
 
 	</div>
 
-	<div id="seajs-benifit-3" class="step" data-x="9200" data-y="15500" data-rotate-x="20" data-rotate-y="60" data-scale="4">
-		<p>采用SeaJS后，代码可能如下：</p>
-		<pre>
-			//shop-list.js
-			define(function (require, export) {
-				var a1 = require('/shop-lit-a1.js'); var a2 = require('/shop-list-a2.js');
-				.......
-				a1.someFunc(); a2.someFunc();
-				.......
-				export.showShoplist = function () {...}; export.initShoplist = function () {...}; export.pagenation = function () {....};
-			});
-
-			//index.html
-			&lt;html&gt;
-				&lt;head&gt;
-					&lt;script src="./sea.js"&gt;&lt;/script&gt;
-					&lt;script src="./jquery-min.js"&gt;&lt;/script&gt;
-				&lt;/head&gt;
-				&lt;body&gt;
-				&lt;script&gt;
-				$(document).ready(function () {
-					seajs.use('./shop-list', function (init) {
-						init.initShoplist();
-						....
-					});
-				});
-				&lt;/script&gt;
-				&lt;/body&gt;
-			&lt;/html&gt;
-		</pre>
+	<div class="step slide" data-x="0" data-y="3000" data-rotate="180">
 
 	</div>
 
-	<div id="seajs-benifit-4" class="step" data-x="12000" data-y="16500" data-rotate-x="-100" data-rotate-y="60" data-scale="4">
-		<p>
-			这样的代码思路会更加清晰，也易于维护。只要需要哪个模块，
-			就引入那个模块，模块内部的依赖，由模块内部负责引用。
-		</p>
+	<div class="step slide" data-x="-1000" data-y="3000" data-rotate="270">
+
 	</div>
 
-    <!--
-        
-        So to make a summary of all the possible attributes used to position presentation steps, we have:
-        
-        * `data-x`, `data-y`, `data-z` - they define the position of **the center** of step element on
-            the canvas in pixels; their default value is 0;
-        * `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate` - they define the rotation of
-            the element around given axis in degrees; their default value is 0; `data-rotate` and `data-rotate-z`
-            are exactly the same;
-        * `data-scale` - defines the scale of step element; default value is 1
-        
-        These values are used by impress.js in CSS transformation functions, so for more information consult
-        CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
-        
-    -->
+	<div class="step slide" data-x="-1000" data-y="1500" data-rotate="270">
+
+	</div>
+
+	<div class="step slide" data-x="-1000" data-y="0" data-rotate="270">
+
+	</div>
+
     <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
     </div>
-
+	<!--
 	<div id="end" class="step" data-x="29000" data-y="9000" data-rotate-x="100" data-scale="10">
+		谢谢！
+	</div>
+	-->
+	<div id="end" class="step " data-x="1000" data-y="1000">
 		谢谢！
 	</div>
 
