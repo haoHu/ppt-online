@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c50accbd-d816-429b-8c68-e3f6e193d13d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hualala-dinner-time.html" afterPath="$PROJECT_DIR$/hualala-dinner-time.html" />
     </list>
     <ignored path="ppt-online.iws" />
@@ -28,7 +27,7 @@
       <file leaf-file-name="hualala-dinner-time.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hualala-dinner-time.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="270" column="10" selection-start="9797" selection-end="9797" vertical-scroll-proportion="0.62890625">
+            <state line="272" column="92" selection-start="10142" selection-end="10142" vertical-scroll-proportion="0.703125">
               <folding />
             </state>
           </provider>
@@ -180,12 +179,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24944155" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24944155" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -273,7 +272,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hualala-dinner-time.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="270" column="10" selection-start="9797" selection-end="9797" vertical-scroll-proportion="0.62890625">
+        <state line="272" column="92" selection-start="10142" selection-end="10142" vertical-scroll-proportion="0.703125">
           <folding />
         </state>
       </provider>
